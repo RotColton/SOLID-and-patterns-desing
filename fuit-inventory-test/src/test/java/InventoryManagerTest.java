@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.rot.Product;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -54,7 +56,7 @@ public class InventoryManagerTest {
 
     @Test
     void testGetLowStockProducts() {
-        List<Product> lowStock = manager.getLowStockProducts(5);
+        Set<Product> lowStock = manager.getLowStockProducts(5);
         assertEquals(1, lowStock.size());
         assertEquals("Yerba Mate", lowStock.get(0).getName());
     }
