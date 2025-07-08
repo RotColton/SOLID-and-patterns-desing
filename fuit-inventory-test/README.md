@@ -30,7 +30,7 @@ Estàs desenvolupant un sistema per gestionar l’inventari d’una botiga de fr
 
 ### ✍️ Instruccions:
 - 🧪 Realitza el desenvolupament seguint la metodologia TDD **(Desenvolupament Guiat per Proves)**. Implementa les classes i mètodes necessaris perquè tots **els tests unitaris passin** correctament.
-- Un cop acabat l’exercici, **puja el codi** al repositori remot juntament amb una **captura de pantalla de l’execució dels tests**. Un cop pujat, comparteix la URL del repositori amb el mentor.
+- 📤 Un cop acabat l’exercici, **puja el codi** al repositori remot juntament amb una **captura de pantalla de l’execució dels tests**. Un cop pujat, comparteix la URL del repositori amb el mentor.
 
 
 
