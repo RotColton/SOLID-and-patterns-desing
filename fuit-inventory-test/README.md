@@ -26,6 +26,7 @@ Estàs desenvolupant un sistema per gestionar l’inventari d’una botiga de fr
 > **Història 5 - Com a responsable d’inventari, vull poder aplicar descomptes personalitzats als productes.**
 > - [ ] He de poder obtenir el preu final del producte.
 > - [ ] He de poder mostrar un missatge amb el motiu del descompte realitzat.
+> - [ ] Si el producte és perible, el descompte aplicat ha d’incloure un 2% extra automàticament.
 ---
 
 ### ✍️ Instruccions:

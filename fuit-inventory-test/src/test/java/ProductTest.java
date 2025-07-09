@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.rot.PerishableProduct;
+import org.rot.NonPerishableProduct;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -9,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductTest {
 
-    private static PerishableProduct perishableProduct;
-    private static NonPerishableProduct nonPerishableProduct;
-    private static LocalDate expiration;
+    private PerishableProduct perishableProduct;
+    private NonPerishableProduct nonPerishableProduct;
+    private LocalDate expiration;
 
-    @BeforeAll
-    static void initAll() {
+    @BeforeEach
+    void init() {
         expiration = LocalDate.now().plusYears(7);
         perishableProduct = new PerishableProduct("Apple Juice", 1.5, 12, expiration);
         nonPerishableProduct = new NonPerishableProduct("Yerba Mate", 4.5, 5);
@@ -25,7 +28,7 @@ public class ProductTest {
         assertAll("perishableProduct",
                 () -> assertEquals("Apple Juice", perishableProduct.getName()),
                 () -> assertEquals(1.5, perishableProduct.getPrice()),
-                () -> assertEquals(12, perishableProduct.getQuatity()),
+                () -> assertEquals(12, perishableProduct.getQuantity()),
                 () -> assertEquals(expiration, perishableProduct.getExpirationDate())
         );
     }
@@ -37,15 +40,15 @@ public class ProductTest {
 
     @Test
     void testPerishableProductIsExpired_True(){
-        assertFalse(new PerishableProduct("Manzanita", 0.8, 5, LocalDate.now().minusYears(2)).isExpired());
+        assertTrue(new PerishableProduct("Manzanita", 0.8, 5, LocalDate.now().minusYears(2)).isExpired());
     }
 
     @Test
     void testCreteNonPerishableProduct_Success(){
         assertAll("nonPerishableProduct",
-                () -> assertEquals("Yerba Mata", nonPerishableProduct.getName()),
+                () -> assertEquals("Yerba Mate", nonPerishableProduct.getName()),
                 () -> assertEquals(4.5, nonPerishableProduct.getPrice()),
-                () -> assertEquals(5, nonPerishableProduct.getQuatity())
+                () -> assertEquals(5, nonPerishableProduct.getQuantity())
         );
     }
 
@@ -55,12 +58,12 @@ public class ProductTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        float finalPrice =  nonPerishableProduct.applyDiscount(15, "summer discount");
+        double finalPrice =  nonPerishableProduct.applyDiscount(15.0, "summer discount");
 
         System.setOut(originalOut);
 
-        assertEquals(4.05,finalPrice);
-        assertEquals("summer discount", outContent.toString());
+        assertEquals(3.825, finalPrice);
+        assertEquals("summer discount", outContent.toString().trim());
     }
 
 }
