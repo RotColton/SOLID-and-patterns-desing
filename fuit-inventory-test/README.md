@@ -8,9 +8,9 @@ Estàs desenvolupant un sistema per gestionar l’inventari d’una botiga de fr
 
 ### 👤 Històries d’Usuari
 
-> **Història 1 - Com a responsable d’inventari, vull poder registrar productes genèrics i peribles.**
+> **Història 1 - Com a responsable d’inventari, vull poder registrar productes peribles i no peribles.**
  - [ ] Un producte té un nom, un preu i una quantitat en estoc.
- - [ ] Alguns productes són peribles i tenen una data de caducitat.
+ - [ ] ELs productes peribles tenen una data de caducitat.
  - [ ] Ha d’existir una manera de saber si un producte perible està caducat.
 ---
 > **Història 2 – Com a responsable d’inventari, vull poder consultar productes pel seu nom.**
@@ -18,7 +18,7 @@ Estàs desenvolupant un sistema per gestionar l’inventari d’una botiga de fr
  - [ ] Si el producte no existeix, el sistema ha de llençar un error específic.
 ---
 > **Història 3 – Com a responsable d’inventari, vull identificar productes amb poc estoc.**
- - [ ] He de poder obtenir una llista de tots els productes la quantitat dels quals sigui inferior a un llindar configurable.
+- [ ] He de poder obtenir una llista de tots els productes amb una quantitat inferior a un llindar configurable.
 ---
 > **Història 4 – Com a responsable d’inventari, vull conèixer el valor total de l’inventari.**
  - [ ] He de poder obtenir la suma de (preu × quantitat) de tots els productes emmagatzemats.
