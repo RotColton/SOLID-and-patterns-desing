@@ -89,7 +89,7 @@
 > Definir varios constructores con distintos parámetros.
 
 28. ¿Qué diferencia la interfaz `Set` de la interfaz `List`?
-> `Set` no permite duplicados; `List` sí y mantiene orden.
+> `Set` no permite duplicados; `List`, sí.
 
 29. ¿Cómo pasa java los argumentos: por valor o por referencia?
 > Por valor.
@@ -98,7 +98,7 @@
 > No.
 
 31. ¿Qué sucede cuando se instancia una clase? ¿Qué debo hacer para instanciarla?
-> Se crea un objeto usando `new` y un constructor.
+> Se crea un objeto en memoria; usando `new` y un constructor.
 
 32. ¿Las clases abstractas pueden ser instanciadas?
 > No.
