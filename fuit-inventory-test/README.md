@@ -1,4 +1,4 @@
-# 📝 Prova Tècnica Java — Inventari de Fuitas
+# 📝 Prova Tècnica Java — Inventari de Fruites
 Durada estimada: 40 minuts
 
 ---
