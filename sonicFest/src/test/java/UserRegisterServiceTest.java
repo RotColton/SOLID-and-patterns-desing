@@ -1,5 +1,8 @@
+import exception.UserAlreadyExistsException;
+import exception.UserUnderageException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import service.UserRegisterService;
 
 import java.time.LocalDate;
 
