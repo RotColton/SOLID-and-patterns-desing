@@ -16,7 +16,7 @@ Imaginemos una aplicación de reparto de comida que sigue el siguiente proceso d
 > Cada etapa del proceso realiza una devolución de llamada (*callback*) para notificar que su tarea ha concluido.
 
 ### 🔬 Echemos un vistazo a cómo implementarlo en Java:
-[URL del repositorio]
+(ORDER Repository)[https://github.com/RotColton/SOLID-and-patterns-desing/tree/main/callback-pattern/src/main/java/order]
 
 ---
 
@@ -37,4 +37,4 @@ Cuando el corte esté terminado, el peluquero nos llamará por teléfono para av
 Una vez que finaliza su tarea, **envía una notificación (la llamada telefónica)** para avisarnos que el proceso ha concluido.
 
 🔬 Veamos cómo implementarlo en Java:
-[URL del repositorio]
+(PET SALON Repository)[https://github.com/RotColton/SOLID-and-patterns-desing/tree/main/callback-pattern/src/main/java/pet_salon]
